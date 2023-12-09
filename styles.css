@@ -160,13 +160,13 @@ body {
     }
 
     50% {
-        background-image: url("./images/7.jpg"), url("./images/77.jpg");
-        background-position: top right, top left;
+        background-image: url("./images/77.jpg"), url("./images/7.jpg");
+        background-position: top left, top right;
     }
 
     60% {
-        background-image: url("./images/7.jpg"), url("./images/77.jpg");
-        background-position: top right, top left;
+        background-image: url("./images/77.jpg"), url("./images/7.jpg");
+        background-position: top left, top right;
     }
 
     80% {
