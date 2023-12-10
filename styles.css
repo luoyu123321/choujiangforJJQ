@@ -1,13 +1,19 @@
 body {
     perspective: 1000px;
-    background-image: url(./images/1.jpg), url(./images/2.jpg);
-    background-position: top left, top right;
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 100%;
     height: 98vh;
     margin: 0;
-    animation: backgroundAnim 10s infinite;
+}
+
+.backgroundimg {
+    width: 100%;
+    height: 100%;
+    /* background-image: url(./images/1.jpg), url(./images/2.jpg); */
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: backgroundAnim 60s infinite;
+
 }
 
 #choujiang {
@@ -58,18 +64,17 @@ body {
     max-width: 80%;
     max-height: 80%;
     overflow: auto;
-    /* ----------------彩蛋后面添加上-------------- */
-    /* background-image: url('./images/./3.jpg');
+    background-image: url('./images/tip1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -40px */
+    /* background-position: 0 0px */
 }
 
 .bingo {
     text-align: center;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .openModal {
@@ -97,6 +102,11 @@ body {
     max-width: 80%;
     max-height: 80%;
     overflow: auto;
+    background-image: url('./images/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -40px;
+    animation: modalBackgroundAnim 15s infinite;
 }
 
 .modal h2 {
@@ -135,6 +145,27 @@ body {
     cursor: pointer;
   }
 
+@keyframes modalBackgroundAnim {
+    0% {
+        background-image: url("./images/modal2.jpg");
+    }
+    20% {
+        background-image: url("./images/modal3.jpg");
+    }
+    40% {
+        background-image: url("./images/modal4.jpg");
+    }
+    60% {
+        background-image: url("./images/modal5.jpg");
+    }
+    80% {
+        background-image: url("./images/modal6.jpg");
+    }
+    100% {
+        background-image: url("./images/modal2.jpg");
+    }
+}
+
 /* 
   思路：
   真实图片和动画图片同时出发，真实图片透明度逐渐变为0，动漫图片透明度逐渐变为1
@@ -145,39 +176,140 @@ body {
 
 @keyframes backgroundAnim {
     0% {
-        background-image: url("./images/1.jpg");
-        background-position: 0 0;
+        background-image: url("./images/1.jpg"), url("./images/blank.jpg");
+        background-position: 0 0, 100% 0;
     }
 
-    20% {
-        background-image: url("./images/2.jpg"), url("./images/11.jpg");
-        background-position: 0 0, 98% 0;
+    10% {
+        background-image: url("./images/1change.jpg"), url("./images/2.jpg");
+        background-position: 100% 0, 0 0;
     }
 
-    30% {
-        background-image: url("./images/2.jpg"), url("./images/11.jpg");
-        background-position: 0 0, 98% 0;
+    11% {
+        background-image: url("./images/1change.jpg"), url("./images/2.jpg");
+        background-position: 100% 0, 0 0;
     }
 
-    50% {
-        background-image: url("./images/77.jpg"), url("./images/7.jpg");
-        background-position: top left, top right;
+    11.00000001% {
+        background-image: url("./images/2.jpg"), url("./images/1change.jpg");
+        background-position: 0 0, 100% 0;
     }
 
-    60% {
-        background-image: url("./images/77.jpg"), url("./images/7.jpg");
-        background-position: top left, top right;
+    21% {
+        background-image: url("./images/2change.jpg"), url("./images/3.jpg");
+        background-position: 100% 0, 0 0;
     }
 
-    80% {
-        background-image: url("./images/11.jpg"), url("./images/1.jpg");
-        background-position: top right, top left;
+    22% {
+        background-image: url("./images/2change.jpg"), url("./images/3.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    22.00000001% {
+        background-image: url("./images/3.jpg"), url("./images/2change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    32% {
+        background-image: url("./images/3change.jpg"), url("./images/4.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    33% {
+        background-image: url("./images/3change.jpg"), url("./images/4.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    33.00000001% {
+        background-image: url("./images/4.jpg"), url("./images/3change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    43% {
+        background-image: url("./images/4change.jpg"), url("./images/5.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    44% {
+        background-image: url("./images/4change.jpg"), url("./images/5.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    44.00000001% {
+        background-image: url("./images/5.jpg"), url("./images/4change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    54% {
+        background-image: url("./images/5change.jpg"), url("./images/6.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    55% {
+        background-image: url("./images/5change.jpg"), url("./images/6.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    55.00000001% {
+        background-image: url("./images/6.jpg"), url("./images/5change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    65% {
+        background-image: url("./images/6change.jpg"), url("./images/2.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    66% {
+        background-image: url("./images/6change.jpg"), url("./images/2.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    66.00000001% {
+        background-image: url("./images/2.jpg"), url("./images/6change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    76% {
+        background-image: url("./images/2change.jpg"), url("./images/8.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    77% {
+        background-image: url("./images/2change.jpg"), url("./images/8.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    77.00000001% {
+        background-image: url("./images/8.jpg"), url("./images/2change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    87% {
+        background-image: url("./images/8change.jpg"), url("./images/9.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    88% {
+        background-image: url("./images/8change.jpg"), url("./images/9.jpg");
+        background-position: 100% 0, 0 0;
+    }
+
+    88.00000001% {
+        background-image: url("./images/9.jpg"), url("./images/2change.jpg");
+        background-position: 0 0, 100% 0;
+    }
+
+    98% {
+        background-image: url("./images/9change.jpg"), url("./images/1.jpg");
+        background-position: 100% 0, 0 0;
     }
 
     100% {
-        background-image: url("./images/11.jpg"), url("./images/1.jpg");
-        background-position: top right, top left;
+        background-image: url("./images/9change.jpg"), url("./images/1.jpg");
+        background-position: 100% 0, 0 0;
     }
+
 }
 
 
@@ -190,7 +322,7 @@ body {
 }
 
 .f1 {
-    bottom: 300px;
+    bottom: 0px;
     width: 154px;
     height: 121px;
     background-image: url(./images/txgc_6d0e9e5.png);
@@ -198,7 +330,7 @@ body {
 }
 
 .f2 {
-    bottom: 200px;
+    bottom: 0px;
     width: 167px;
     height: 176px;
     background-image: url(./images/txgh_fee2457.png);
@@ -206,7 +338,7 @@ body {
 }
 
 .f3 {
-    bottom: 100px;
+    bottom: 0px;
     width: 161px;
     height: 149px;
     background-image: url(./images/txgl_c15cfd8.png);

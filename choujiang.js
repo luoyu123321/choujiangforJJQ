@@ -24,31 +24,31 @@ class Tab {
   }
 
   initData() {
-    // sessionStorage.setItem('choujiangTimes', '0')
-    // sessionStorage.setItem('jiangpin', '[]')
-    sessionStorage.removeItem('choujiangTimes')
-    sessionStorage.removeItem('jiangpin')
+    // localStorage.setItem('choujiangTimes', '0')
+    // localStorage.setItem('jiangpin', '[]')
+    localStorage.removeItem('choujiangTimes')
+    localStorage.removeItem('jiangpin')
   }
 
   initFunc() {
     // 把类中的 this 添加到 Tab 类下的 self 属性上
     Tab.self = this
-    const choujiangTimes = sessionStorage.getItem('choujiangTimes');
-    const jiangpin = sessionStorage.getItem('jiangpin');
+    const choujiangTimes = localStorage.getItem('choujiangTimes');
+    const jiangpin = localStorage.getItem('jiangpin');
     console.log('choujiangTimes', choujiangTimes,jiangpin)
     this.timesContent.innerText = `剩余 ${2 - parseInt(choujiangTimes || 0)} 次机会`
   }
 
   click() {
-    const choujiangTimes = sessionStorage.getItem('choujiangTimes');
-    const jiangpinArr = sessionStorage.getItem('jiangpin');
-    console.log('sessionStorage1', choujiangTimes, 'sessionStorage2', jiangpinArr)
+    const choujiangTimes = localStorage.getItem('choujiangTimes');
+    const jiangpinArr = localStorage.getItem('jiangpin');
+    console.log('localStorage1', choujiangTimes, 'localStorage2', jiangpinArr)
     if (choujiangTimes >= 2) {
       return alert('抽奖次数用完啦，看看自己的奖品吧')
     }
     const that = Tab.self
     that.startend = !that.startend
-    !that.startend && sessionStorage.setItem('choujiangTimes', parseInt(choujiangTimes || 0) + 1)
+    !that.startend && localStorage.setItem('choujiangTimes', parseInt(choujiangTimes || 0) + 1)
     if (that.startend) {
       // const jiangpin = ['苹果手表', '一元参与奖', '一小套化妆品(价值600元)', '带金手串', '一元参与奖','苹果手表', '一元参与奖', '一小套化妆品(价值600元)', '带金手串', '一元参与奖']
       const jiangpin = ['测试小狗屎1', '测试小垃圾2', '测试罗老师3', '测试床4', '测试瘦5', '测试小狗屎1', '测试小垃圾2', '测试罗老师3', '测试床4', '测试瘦5']
@@ -63,11 +63,9 @@ class Tab {
         that.bingoContent.innerText = '';
         document.getElementById('tips').classList.add('show');
         document.getElementById('modal-overlay').classList.add('show');
-        that.bingoContent.innerHTML = `<div>恭喜你</div><div>中了【<span style="color: greenyellow;">${that.bingoGift}</span>】</div>`;
-        //  ----------------彩蛋后面添加上-------------- 
-        // that.bingoContent.innerHTML = `<div>恭喜小公主</div><div>中了【${that.bingoGift}】</div>`;
+        that.bingoContent.innerHTML = `<div>恭喜小公主</div><div>中了【<span style="color: greenyellow; font-weight: bold;">${that.bingoGift}</span>】</div>`;
         const newJiangpinArr = JSON.stringify(JSON.parse(jiangpinArr || '[]').concat([that.bingoGift]));
-        sessionStorage.setItem('jiangpin', newJiangpinArr);
+        localStorage.setItem('jiangpin', newJiangpinArr);
       }
     }
     that.initFunc();
@@ -77,7 +75,7 @@ class Tab {
     const that = Tab.self
     // 打开弹框钱先清空弹框内容
     that.hadContent.innerHTML = '';
-    const jiangpinArr = JSON.parse(sessionStorage.getItem('jiangpin') || '[]');
+    const jiangpinArr = JSON.parse(localStorage.getItem('jiangpin') || '[]');
     document.getElementById('modal').classList.add('show');
     document.getElementById('modal-overlay').classList.add('show');
     jiangpinArr.forEach((item)=> that.hadContent.innerHTML += `<div style="color: greenyellow;">${item}</div>`)
