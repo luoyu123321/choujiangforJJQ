@@ -26,8 +26,8 @@ class Tab {
   initData() {
     // localStorage.setItem('choujiangTimes', '0')
     // localStorage.setItem('jiangpin', '[]')
-    localStorage.removeItem('choujiangTimes')
-    localStorage.removeItem('jiangpin')
+    // localStorage.removeItem('choujiangTimes')
+    // localStorage.removeItem('jiangpin')
   }
 
   initFunc() {
