@@ -26,8 +26,8 @@ class Tab {
   initData() {
     // localStorage.setItem('choujiangTimes', '0')
     // localStorage.setItem('jiangpin', '[]')
-    // localStorage.removeItem('choujiangTimes')
-    // localStorage.removeItem('jiangpin')
+    localStorage.removeItem('choujiangTimes')
+    localStorage.removeItem('jiangpin')
   }
 
   initFunc() {
@@ -51,7 +51,7 @@ class Tab {
     !that.startend && localStorage.setItem('choujiangTimes', parseInt(choujiangTimes || 0) + 1)
     if (that.startend) {
       // const jiangpin = ['苹果手表', '一元参与奖', '一小套化妆品(价值600元)', '带金手串', '一元参与奖','苹果手表', '一元参与奖', '一小套化妆品(价值600元)', '带金手串', '一元参与奖']
-      const jiangpin = ['测试小狗屎1', '测试小垃圾2', '测试罗老师3', '测试床4', '测试瘦5', '测试小狗屎1', '测试小垃圾2', '测试罗老师3', '测试床4', '测试瘦5']
+      const jiangpin = ['一个愿望', '两个愿望', '周末游（500元预算）', '周末游（1000元预算）', '周末游（1500元预算）', '参与奖5.20元', '参与奖13.14元', '参与安慰奖52元', '参与慰问奖131.4元', '特等隐藏奖苹果手表']
       that.timeout = setInterval(() => {
         const res = parseInt(Math.random() * 10);
         that.jiangpinContent.innerText = jiangpin[res];
