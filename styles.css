@@ -12,8 +12,12 @@ body {
     background-position: top left, top right;
     background-repeat: no-repeat;
     background-size: contain;
-    animation: backgroundAnim 60s infinite;
-
+    @media (max-width: 800px) {
+        animation: backgroundAnimForphone 30s infinite;
+    }
+    @media (min-width: 801px) {
+        animation: backgroundAnim 60s infinite;
+    }
 }
 
 #choujiang {
@@ -375,6 +379,45 @@ body {
         background-position: 100% 0, 0 0;
     }
 
+}
+
+@keyframes backgroundAnimForphone {
+    0% {
+        background-image: url("./images/1.jpg");
+    }
+    10% {
+        background-image: url("./images/1change.jpg");
+    }
+    20% {
+        background-image: url("./images/3.jpg");
+    }
+    30% {
+        background-image: url("./images/3change.jpg");
+    }
+    40% {
+        background-image: url("./images/5.jpg");
+    }
+    50% {
+        background-image: url("./images/5change.jpg");
+    }
+    60% {
+        background-image: url("./images/6.jpg");
+    }
+    70% {
+        background-image: url("./images/6change.jpg");
+    }
+    80% {
+        background-image: url("./images/8.jpg");
+    }
+    90% {
+        background-image: url("./images/8change.jpg");
+    }
+    95% {
+        background-image: url("./images/9.jpg");
+    }
+    100% {
+        background-image: url("./images/9change.jpg");
+    }
 }
 
 
