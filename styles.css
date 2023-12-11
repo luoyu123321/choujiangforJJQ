@@ -381,54 +381,49 @@ body {
 
 @keyframes backgroundAnimForphone {
     0% {
+        background-image: url("./images/blank.jpg");
+    }
+    
+    10% {
         background-image: url("./images/1.jpg");
     }
-
-    10% {
+    
+    20% {
         background-image: url("./images/1change.jpg");
     }
-
-    20% {
+    
+    30% {
         background-image: url("./images/3.jpg");
     }
-
-    30% {
+    
+    40% {
         background-image: url("./images/3change.jpg");
     }
-
-    40% {
+    
+    50% {
         background-image: url("./images/5.jpg");
     }
-
-    50% {
+    
+    60% {
         background-image: url("./images/5change.jpg");
     }
-
-    60% {
+    
+    70% {
         background-image: url("./images/6.jpg");
     }
-
-    70% {
+    
+    80% {
         background-image: url("./images/6change.jpg");
     }
-
-    80% {
+    
+    90% {
         background-image: url("./images/8.jpg");
     }
-
-    90% {
+    
+    100% {
         background-image: url("./images/8change.jpg");
     }
-
-    95% {
-        background-image: url("./images/9.jpg");
-    }
-
-    100% {
-        background-image: url("./images/9change.jpg");
-    }
 }
-
 
 
 /* 阴阳师f4部分 */
