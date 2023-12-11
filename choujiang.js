@@ -49,8 +49,8 @@ class Tab {
   initData() {
     localStorage.setItem('addcdk', JSON.stringify(['我爱你', '我喜欢你', '我对象最帅']))
     // localStorage.setItem('jiangpin', '[]')
-    localStorage.removeItem('choujiangTimes')
-    localStorage.removeItem('jiangpin')
+    // localStorage.removeItem('choujiangTimes')
+    // localStorage.removeItem('jiangpin')
   }
 
   initFunc() {
