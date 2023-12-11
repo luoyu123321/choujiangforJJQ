@@ -14,7 +14,7 @@ body {
     background-size: contain;
     @media (max-width: 800px) {
         animation: backgroundAnimForphone 30s infinite;
-    }
+    };
     @media (min-width: 801px) {
         animation: backgroundAnim 60s infinite;
     }
@@ -234,14 +234,6 @@ body {
         background-image: url("./images/modal2.jpg");
     }
 }
-
-/* 
-  思路：
-  真实图片和动画图片同时出发，真实图片透明度逐渐变为0，动漫图片透明度逐渐变为1
-  同时第二张真实照片在最低层从右往左到最左边，透明度也是从0到1
-  往后在重复动作
-
-*/
 
 @keyframes backgroundAnim {
     0% {
@@ -463,7 +455,7 @@ body {
 
 @keyframes move_f4 {
     0% {
-        transform: translate(0, 0);
+        transform: translate(-10%, -10%);
     }
 
     100% {
